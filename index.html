@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locus HR Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Top">
+        <span class="TopTxt">Welcome to Locus Group Ghana since 2005</span>
+    </div>
+    <div class="preloader">
+        <div class="left">        
+            <img src="logo1.jpeg" alt="LocustLogo" class="LocustLogo">
+        </div>
+        <div class="right">
+            <div class="teleimg">
+                <img src="phone.png" alt="phone icon">
+            </div>
+            <div class="right-txt">
+                <a href="tel:+233540116781"><span class="number">+233 5401 167 81</span> </a>
+                <br>
+                <a href="mailto:info@locustgroupgh.com">info@locustgroupgh.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-icon" onclick="toggleNavPanel()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Panel -->
+    <div id="nav-panel" class="nav-panel">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNavPanel()">&times;</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2>Welcome to Locus HR Solutions</h2>
+            <p>Your Trusted Partner in Human Resource Excellence</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="images/about-us.jpg" alt="About Us">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>Locus HR Solutions is a premier HR consultancy firm...</p>
+                    <h3>Our Story</h3>
+                    <p>Founded in 2010, Locus HR Solutions was established...</p>
+                    <h3>Our Core Values</h3>
+                    <ul>
+                        <li><strong>Integrity:</strong> We adhere to the highest standards...</li>
+                        <li><strong>Innovation:</strong> We leverage cutting-edge technology...</li>
+                        <li><strong>Collaboration:</strong> We work closely with our clients...</li>
+                        <li><strong>Excellence:</strong> We are committed to delivering high-quality services...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <!-- Repeat for each service -->
+                <div class="card">
+                    <img src="images/service-1.jpg" alt="Talent Acquisition">
+                    <h3>Talent Acquisition</h3>
+                    <p>Finding the right talent is crucial for your organization’s success...</p>
+                </div>
+                <div class="card">
+                    <img src="images/service-2.jpg" alt="Training and Development">
+                    <h3>Employee Training and Development</h3>
+                    <p>Empower your workforce with our training and development programs...</p>
+                </div>
+                <!-- Add more service cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2>Our Success Stories</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <h3>Case Study 1</h3>
+                    <p>Challenge: ...</p>
+                    <p>Solution: ...</p>
+                    <p>Results: ...</p>
+                </div>
+                <!-- Repeat for more case studies -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Email: info@locushr.com</p>
+            <p>Phone: +233 540116781</p>
+            <p>Address: Dansoman-Accra, Ghana</p>
+            <h3>Request a Consultation</h3>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2>Our Blog</h2>
+            <div class="blog-posts">
+                <!-- Repeat for each blog post -->
+                <div class="blog-post">
+                    <h3>Blog Post Title 1</h3>
+                    <p>Brief description or excerpt...</p>
+                </div>
+                <!-- Add more blog posts -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Locus HR Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
