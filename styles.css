@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: poppins;
     margin: 0;
     padding: 0;
     color: #333;
@@ -8,21 +8,26 @@ body {
 .Top{
     margin-bottom: 20px;
     text-align: center;
+    background-color:  #EBEDEE;
+    padding: 10px 12px;
+}
+.number{
+    font-size: 16px;
 }
 .TopTxt{
-    font-size: 1.5rem;
-    color: #0056b3;
+    font-size: 15px;
+    color: grey
 }
 .preloader{
     display: flex;
-    justify-content:space-evenly
+    justify-content:space-evenly;;
 }
 .right{
     display: flex;
     flex: 1;
     justify-content:center;
     margin-top: 2px;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
 }
 .right-txt a{
@@ -74,27 +79,42 @@ h1, h2, h3 {
     align-items: center;
     margin-left: 35vh;
 }
+/* Navbar */
 .navbar {
+    background-color: #0056b3;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #333;
     color: white;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
     margin: 0 1rem;
+    padding: 0.5rem 0; /* Adjusted padding to increase clickable area */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    padding:12px 12px; /* Added padding for spacing */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-right: 3px dashed grey; /* Add a left border to each link */
+    border-right-width: 2px;
+}
+.nav-links a.no-border {
+    border-right: none; /* Remove the right border for the "Blog" link */
+}
+.nav-links a:hover {
+    color: blue; /* Text color on hover */
+    border-radius: 5px; /* Slight rounding of corners */
 }
 
 .hamburger-icon {
@@ -144,29 +164,48 @@ h1, h2, h3 {
     }
 }
 
+
 /* Hero Section */
 .hero-section {
-    background-image: url('images/hero.jpg');
-    background-size: cover;
+    background: linear-gradient(to right, lavender, #0056b3); /* Gradient from white to light blue *//* Gradient from dark blue to lighter blue */
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 100px 0;
+    height: 450px;
 }
 
 .hero-section .hero-content {
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hero-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.hero-right{
+    background-image: url('businesspersons-with-document.jpg');
+    width: 1280px;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+ .btn{
+    margin-top: 19.6%;
+    right: 56.7%;
+    position: absolute;
+    padding: 30px 50px;
+    text-decoration: none;
 }
 
 /* About Us Section */
