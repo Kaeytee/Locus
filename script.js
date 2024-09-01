@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-
-    // Optional: Add any additional JavaScript interactions or animations here
+// script.js
+function toggleNavPanel() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
 });
