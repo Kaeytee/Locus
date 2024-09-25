@@ -742,19 +742,48 @@ hr {
     20% {
         transform: rotate(-15deg);
     }
-}
-@media (max-width: 1024px) {
+}@media (max-width: 1360px) {
+    .nav-links {
+        font-size: 1.3rem;
+    }
     .portfolio-item {
         grid-template-columns: 1fr; /* Adjust to one column for medium screens */
         text-align: center; /* Center text and content */
     }
-}
 
-@media (max-width:1360px){
-    .nav-links{
-        font-size: 1.3rem;
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Make the portfolio grid one column */
+    }
+
+    .services-section .service-cards {
+        grid-template-columns: 1fr; /* Services adjust to one column */
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr; /* Blog section adjusts to one column */
+    }
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px; /* Reduce the gap between text and form */
+    }
+
+    .container1txt {
+        border-right: none;
+        padding-right: 0;
+        text-align: center; /* Center text in smaller screens */
+    }
+
+    .socials {
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .container1form form {
+        align-items: center;
     }
 }
+
 @media (max-width: 1185px) {
     .about-section {
         height: auto;
@@ -767,7 +796,7 @@ hr {
     .about-content {
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
         width: 100%;
@@ -776,7 +805,7 @@ hr {
     .about-image {
         width: 100%;
         height: auto;
-        margin-bottom: 20px; /* Add some spacing between the image and text */
+        margin-bottom: 20px;
     }
 
     .about-image img {
@@ -796,7 +825,7 @@ hr {
     .cardcontainer {
         display: flex;
         gap: 20px;
-        justify-content: center; /* Center the cards */
+        justify-content: center;
         width: 100%;
     }
 
@@ -811,20 +840,24 @@ hr {
         width: 250px;
         transition: .7s;
     }
+
     .services-section .service-cards {
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
+
     .blog-grid {
         gap: 30px;
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
     }
 }
+
+
 @media (max-width: 768px) {
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Still one column layout */
+        grid-template-columns: 1fr; /* Portfolio items display one per row */
     }
 
     .portfolio-item {
@@ -833,5 +866,69 @@ hr {
 
     .portfolio-item img {
         width: 100%; /* Ensure image scales down */
+    }
+
+    .services-section .service-cards {
+        grid-template-columns: 1fr; /* Services adjust to one column */
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr; /* Blog section adjusts to one column */
+    }
+
+    .cardcontainer {
+        flex-wrap: wrap;
+    }
+
+    .cardcontainer .card {
+        width: 100%;
+    }
+    .container1 {
+        gap: 30px;
+    }
+
+    .container1txt {
+        margin-bottom: 20px; /* Add some spacing below the text section */
+    }
+
+    .container1form form {
+        width: 100%;
+    }
+
+    .socials {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .formbtn {
+        width: 100%;
+        max-width: 250px; /* Ensure the button scales properly */
     }
 }
