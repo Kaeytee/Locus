@@ -882,6 +882,32 @@ hr {
 
 
 @media (max-width: 768px) {
+    .preloader {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left, .right {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .LocustLogo {
+        width: 100px; /* Adjust size on smaller screens */
+    }
+
+    .right {
+        font-size: 12px;
+    }
+
+    .teleimg {
+        width: 30px;
+    }
+
+    .teleimg img {
+        width: 25px;
+    }
     .portfolio-grid {
         grid-template-columns: 1fr; /* Portfolio items display one per row */
     }
@@ -981,4 +1007,13 @@ hr {
         animation: shake 0.25s;
     }
     
+}
+@media (max-width: 480px) {
+    .TopTxt {
+        font-size: 14px;
+    }
+
+    .right {
+        font-size: 10px;
+    }
 }
