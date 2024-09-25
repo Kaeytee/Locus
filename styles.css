@@ -957,4 +957,28 @@ hr {
         width: 100%;
         max-width: 250px; /* Ensure the button scales properly */
     }
+    .icon-instagram {
+        background-color: red;
+        outline-color: red;
+    }
+    
+    .icon-twitter{
+        background-color: blue;
+        outline-color: blue;
+    }
+    
+    .icon-github{
+        background-color: skyblue;
+        outline-color: skyblue;
+    }
+    
+    .icon-codepen {
+        background-color: violet;
+        outline-color: violet;
+    }
+    
+    .icon:hover i {
+        animation: shake 0.25s;
+    }
+    
 }
