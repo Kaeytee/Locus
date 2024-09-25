@@ -469,12 +469,6 @@ hr {
 
 /* Portfolio Section */
 /* Success Story Case Study styling */
-.portfolio-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    border-right: 1px solid #0056b3;
-    width: 270px;
-}/* Portfolio Section */
 .portfolio-section {
     padding: 50px 0;
     background-color: #f9f9f9;
@@ -482,9 +476,9 @@ hr {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
     gap: 30px;
-    padding: 20px 0x;
+    overflow: hidden; /* Hide any overflow content */
 }
 
 .portfolio-item {
@@ -493,32 +487,49 @@ hr {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .portfolio-item img {
     display: block;
     margin: 0 auto;
+    max-width: 100%; /* Ensure image does not overflow */
 }
+
 .portfolio-item img:hover {
     transform: translateY(-10px);
     transition: transform 0.3s;
 }
+
 .portfolio-item h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #333;
     font-weight: 500;
+    text-align: center;
 }
 
 .portfolio-item p {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 15px;
-    padding-left: 22px;
     font-weight: 300;
+    text-align: center; /* Center text */
+}
+
+.read-more-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+    margin-top: auto; /* Push button to the bottom */
 }
 
 .read-more-btn {
@@ -732,6 +743,13 @@ hr {
         transform: rotate(-15deg);
     }
 }
+@media (max-width: 1024px) {
+    .portfolio-item {
+        grid-template-columns: 1fr; /* Adjust to one column for medium screens */
+        text-align: center; /* Center text and content */
+    }
+}
+
 @media (max-width:1360px){
     .nav-links{
         font-size: 1.3rem;
@@ -797,5 +815,23 @@ hr {
         display: grid;
         grid-template-columns: 1fr 1fr ;
         gap: 20px;
+    }
+    .blog-grid {
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Still one column layout */
+    }
+
+    .portfolio-item {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .portfolio-item img {
+        width: 100%; /* Ensure image scales down */
     }
 }
