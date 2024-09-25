@@ -7,19 +7,32 @@ body {
     background-color:#e9f1fa;
     
 }
-.Top{
-    margin-bottom: 20px;
-    text-align: center;
-    background-color:  #EBEDEE;
-    padding: 10px 12px;
+h1, h2, h3 {
+    color: #0056b3;
 }
-.number{
-    font-size: 16px;
+
+hr {
+    border: none;
+    border-top: 2px solid #c7dbf1;
+    margin: 20px 0;
+}
+ /* Top Bar */
+.top-bar {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
 }
 .TopTxt{
     font-size: 15px;
     color: grey
 }
+.number{
+    font-size: 16px;
+}
+/* Pre Loader */
+
 .preloader{
     display: flex;
     justify-content:space-evenly;;
@@ -43,6 +56,7 @@ body {
 .teleimg img{
     width: 30px;
 }
+/* Containers */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -54,9 +68,7 @@ body {
     margin: 0 auto;
     background-color:#e9f1fa;
 }
-h1, h2, h3 {
-    color: #0056b3;
-}
+ /* Buttons  */
 
 
 .btn {
@@ -66,28 +78,31 @@ h1, h2, h3 {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
-
-
-/* Navbar */
-.navbar {
-    background-color:royalblue;
-    padding: 15px 0;
-}
-
-.navbar .logo {
+.btnn {
+    background-color: #0056b3;
     color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
-.LocustLogo{
-    width: 12%;
-    align-items: center;
-    margin-left: 35vh;
+.btnn:hover{
+    background-color: #003f7f;
+}
+.btn{
+    margin-top: 19.6%;
+    right: 56.7%;
+    position: absolute;
+    padding: 30px 50px;
+    text-decoration: none;
 }
 /* Navbar */
+
+
+
+/* Navbar */
 .navbar {
-    
+    background-color: royalblue;
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
@@ -106,7 +121,15 @@ h1, h2, h3 {
     margin: 0 1rem;
     padding: 0.5rem 0; 
 }
-
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.LocustLogo{
+    max-width: 12%;
+    align-items: center;
+}
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -142,7 +165,7 @@ h1, h2, h3 {
 }
 
 .nav-panel a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -199,14 +222,7 @@ h1, h2, h3 {
     align-items: center;
     color: #333;
 }
-.btnn {
-    background-color: #0056b3;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
+
 .hero-right{
     background-image: url('Images/businesspersons-with-document.jpg');
     width: 1280px;
@@ -215,13 +231,7 @@ h1, h2, h3 {
     background-repeat: no-repeat;
     background-position: top;
 }
- .btn{
-    margin-top: 19.6%;
-    right: 56.7%;
-    position: absolute;
-    padding: 30px 50px;
-    text-decoration: none;
-}
+
 
 /* About Us Section */
 .about-section {
