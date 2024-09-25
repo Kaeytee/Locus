@@ -1,14 +1,20 @@
-/* General Styles */
 body {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color:#e9f1fa;
-    
+    background-color: #f4f4f9;
 }
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 h1, h2, h3 {
     color: #0056b3;
+    font-weight: 600;
 }
 
 hr {
@@ -16,8 +22,9 @@ hr {
     border-top: 2px solid #c7dbf1;
     margin: 20px 0;
 }
- /* Top Bar */
- .top-bar {
+
+/* Top Bar */
+.top-bar {
     background-color: #0056b3;
     color: white;
     padding: 10px 0;
@@ -25,115 +32,47 @@ hr {
     font-size: 14px;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .TopTxt {
-    font-size: 16px; /* Increase font size for better visibility */
+    font-size: 16px;
     font-weight: 500;
-    color: #fff; /* White text for better contrast */
-    font-family: 'Poppins', sans-serif; /* Professional font */
+    color: white;
     letter-spacing: 0.5px;
 }
 
-/* Preloader */
-.preloader {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    align-items: center;
-}
-
-.left {
-    display: flex;
-    align-items: center;
-}
-
-.LocustLogo {
-    width: 120px; /* Adjust size to be more responsive */
-    height: auto;
-}
-
-.right {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: center;
-    font-weight: 300;
-    font-size: 14px;
-}
-
-.right-txt {
-    text-align: right;
-}
-
-.right-txt a {
-    color: grey;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.teleimg {
-    width: 40px;
-    margin-right: 10px; /* Space between icon and text */
-}
-
-.teleimg img {
-    width: 30px;
-    height: auto;
-}
-/* Containers */
-.container {
-    width: 90%;
-    margin: 0 auto;
-
-    
-}
-.container1 {
-    width: 90%;
-    margin: 0 auto;
-    background-color:#e9f1fa;
-}
- /* Buttons  */
-
-
-.btn {
-    background-color: transparent;
-    color: transparent;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.btnn {
-    background-color: #0056b3;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-.btnn:hover{
-    background-color: #003f7f;
-}
-.btn{
-    margin-top: 19.6%;
-    right: 56.7%;
-    position: absolute;
-    padding: 30px 50px;
-    text-decoration: none;
-}
-/* Navbar */
-
-
-
-/* Navbar */
 .navbar {
-    background-color: royalblue;
-    padding: 15px 0;
+    background-color: #0056b3;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* For proper positioning of logo and hamburger */
+}
+
+/* Container for Navbar */
+.navcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+.LocustLogo {
+    width: 120px;
+    height: auto;
+}
+
+/* Nav Links */
+.navbar-right {
+    display: flex;
 }
 
 .nav-links {
@@ -141,44 +80,35 @@ hr {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 1.4rem;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0 1rem;
-    padding: 0.5rem 0; 
+    position: relative;
 }
-.navbar .logo {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.LocustLogo{
-    max-width: 12%;
-    align-items: center;
-}
+
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding:12px 12px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border-right: 0.1px dashed grey; 
-}
-.nav-links a.no-border {
-    border-right: none; 
-}
-.nav-links a:hover {
-    background-color: #003f7f;
-    width: 100%;
-    height: max-content;
+    font-size: 1.1rem;
 }
 
+.nav-links a:hover {
+    background-color: #003f7f;
+    border-radius: 5px;
+}
+
+/* Hamburger Icon */
 .hamburger-icon {
     display: none;
     font-size: 2rem;
+    color: white;
     cursor: pointer;
 }
 
+/* Mobile Navigation Panel */
 .nav-panel {
     height: 100%;
     width: 0;
@@ -192,67 +122,84 @@ hr {
 }
 
 .nav-panel a {
-    padding: 8px 32px;
+    padding: 15px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: white;
     display: block;
     transition: 0.3s;
 }
 
 .nav-panel a:hover {
-    color: #f1f1f1;
+    background-color: #0056b3;
 }
 
 .nav-panel .closebtn {
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 25px;
     font-size: 36px;
+    color: white;
 }
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .hamburger-icon {
-        display: block;
-    }
-}
-
-
 /* Hero Section */
 .hero-section {
     background: #f0f0f0;
-    color: #fff;
+    color: #333;
     text-align: center;
-    height: 450px;
+    padding: 60px 20px;
+    background-image: url('Images/businesspersons-with-document.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-/* I will make it flex row on smaler screens  */
-.hero-section h2 {
-    font-size: 2.5rem;
-    margin-top: 100px;
+    align-items: center;
+    height: 450px;
+    position: relative;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.hero-left {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hero-left h2 {
+    font-size: 3rem;
+    color: #0056b3;
+}
+
+.hero-left p {
+    font-size: 1.5rem;
     color: #333;
 }
 
-.hero-right{
-    background-image: url('Images/businesspersons-with-document.jpg');
-    width: 1280px;
-    height: 450px;
-    background-size: cover;
-    background-position: top;
+.btnn {
+    background-color: #0056b3;
+    color: white;
+    width: 120px;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
 
+.btnn:hover {
+    background-color: #003f7f;
+}
 
 /* About Us Section */
 .about-section {
@@ -494,7 +441,6 @@ hr {
 }
 
 /* Portfolio Section */
-/* Success Story Case Study styling */
 .portfolio-section {
     padding: 50px 0;
     background-color: #f9f9f9;
@@ -702,7 +648,6 @@ hr {
 }
 
 
-/* Socials Section */
 .socials {
     display: flex;
     justify-content: center;
@@ -726,7 +671,6 @@ hr {
     justify-content: center;
     align-items: center;
     transition: outline-offset 0.25s, outline-color 0.25s, background-color 0.25s;
-
 }
 
 .icon:hover {
@@ -747,12 +691,12 @@ hr {
     outline-color: blue;
 }
 
-.icon-github:hover {
+.icon-facebook:hover {
     background-color: skyblue;
     outline-color: skyblue;
 }
 
-.icon-codepen:hover {
+.icon-linkedin:hover {
     background-color: violet;
     outline-color: violet;
 }
@@ -768,36 +712,76 @@ hr {
     20% {
         transform: rotate(-15deg);
     }
-}@media (max-width: 1360px) {
+}
+
+@media (max-width: 1024px) {
     .nav-links {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .navbar-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 1360px) {
+    .hero-content {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .hero-left h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-left p {
         font-size: 1.3rem;
     }
+
+    .btnn {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+
     .portfolio-item {
-        grid-template-columns: 1fr; /* Adjust to one column for medium screens */
-        text-align: center; /* Center text and content */
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Make the portfolio grid one column */
+        grid-template-columns: 1fr;
     }
 
     .services-section .service-cards {
-        grid-template-columns: 1fr; /* Services adjust to one column */
+        grid-template-columns: 1fr;
     }
 
     .blog-grid {
-        grid-template-columns: 1fr; /* Blog section adjusts to one column */
+        grid-template-columns: 1fr;
     }
+
     .container1 {
         flex-direction: column;
         align-items: center;
-        gap: 50px; /* Reduce the gap between text and form */
+        gap: 50px;
     }
 
     .container1txt {
         border-right: none;
         padding-right: 0;
-        text-align: center; /* Center text in smaller screens */
+        text-align: center;
     }
 
     .socials {
@@ -880,8 +864,15 @@ hr {
     }
 }
 
-
 @media (max-width: 768px) {
+    .LocustLogo {
+        width: 80px;
+    }
+
+    .top-bar .TopTxt {
+        font-size: 14px;
+    }
+
     .preloader {
         flex-direction: row;
         align-items: center;
@@ -894,7 +885,7 @@ hr {
     }
 
     .LocustLogo {
-        width: 100px; /* Adjust size on smaller screens */
+        width: 100px;
     }
 
     .right {
@@ -908,20 +899,21 @@ hr {
     .teleimg img {
         width: 25px;
     }
+
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Portfolio items display one per row */
+        grid-template-columns: 1fr;
     }
 
     .portfolio-item {
-        padding: 15px; /* Adjust padding for smaller screens */
+        padding: 15px;
     }
 
     .portfolio-item img {
-        width: 100%; /* Ensure image scales down */
+        width: 100%;
     }
 
     .services-section .service-cards {
-        grid-template-columns: 1fr; /* Services adjust to one column */
+        grid-template-columns: 1fr;
     }
 
     .about-section {
@@ -942,7 +934,7 @@ hr {
     }
 
     .blog-grid {
-        grid-template-columns: 1fr; /* Blog section adjusts to one column */
+        grid-template-columns: 1fr;
     }
 
     .cardcontainer {
@@ -952,12 +944,13 @@ hr {
     .cardcontainer .card {
         width: 100%;
     }
+
     .container1 {
         gap: 30px;
     }
 
     .container1txt {
-        margin-bottom: 20px; /* Add some spacing below the text section */
+        margin-bottom: 20px;
     }
 
     .container1form form {
@@ -981,24 +974,25 @@ hr {
 
     .formbtn {
         width: 100%;
-        max-width: 250px; /* Ensure the button scales properly */
+        max-width: 250px;
     }
+
     .icon-instagram {
         background-color: red;
         outline-color: red;
     }
     
-    .icon-twitter{
+    .icon-twitter {
         background-color: blue;
         outline-color: blue;
     }
     
-    .icon-github{
+    .icon-facebook {
         background-color: skyblue;
         outline-color: skyblue;
     }
     
-    .icon-codepen {
+    .icon-linkedin {
         background-color: violet;
         outline-color: violet;
     }
@@ -1006,8 +1000,8 @@ hr {
     .icon:hover i {
         animation: shake 0.25s;
     }
-    
 }
+
 @media (max-width: 480px) {
     .TopTxt {
         font-size: 14px;
