@@ -196,30 +196,25 @@ hr {
 
 /* Hero Section */
 .hero-section {
-    background: #f0f0f0; 
-    background-position: center;
+    background: #f0f0f0;
     color: #fff;
     text-align: center;
     height: 450px;
 }
 
-.hero-section .hero-content {
+.hero-content {
     display: flex;
     justify-content: space-between;
 }
-
+/* I will make it flex row on smaler screens  */
 .hero-section h2 {
     font-size: 2.5rem;
-    justify-content: center;
-    align-items: center;
     margin-top: 100px;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
     color: #333;
 }
 
@@ -228,7 +223,6 @@ hr {
     width: 1280px;
     height: 450px;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: top;
 }
 
@@ -237,6 +231,9 @@ hr {
 .about-section {
     padding: 60px 0;
     background-color: #f4f4f4;
+    display: flex;
+    gap: 20px;
+    height: 450px;
 }
 .about-section h2 {
     text-align: center;
@@ -244,21 +241,24 @@ hr {
     border-right: 1px solid #0056b3;
     width: 220px;
 }
-
-.about-section {
-    position:sticky;
-    display: flex;
-    gap: 20px;
-    height: 450px;
-}
-.about-section .about-content {
+.about-content{
     display: flex;
 }
-.about-content .about-image{
-    width: 900px;
+.about-image {
     height: 450px;
-
+    
 }
+.about-image img {
+    border-radius: 5px;
+    object-fit: contain;
+    object-position: left;
+}
+.about-section .about-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .about-section img {
     border-radius: 5px;
@@ -267,13 +267,161 @@ hr {
     object-position: left;
 }
 
-.about-section .about-text {
+.about-text{
     width: 50%;
+    
+}
+/* card details */
+.cardbody{
+    display:flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cardcontainer{
+    position: relative;
     display: flex;
-    flex-direction: column;
-
+    gap: 20px;
+    align-items: center;
+    
 }
 
+.cardcontainer .card{
+    position: relative;
+}
+  
+.cardcontainer .card .face{
+    width:300px;
+    height: 200px;
+    transition:.7s;
+    
+    
+}
+
+.cardcontainer .card .face.face1{
+    position: relative;
+    background: linear-gradient(45deg, #0056b3, #003f7f);
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    
+}
+
+.cardcontainer .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(14, 84, 212, 0.137);
+    padding: 10px 30px;
+    
+}
+
+
+.cardcontainer .card .face.face1 .content{
+    opacity: 0.5;
+    transition:  0.5s;
+    text-align: center;
+}
+
+.cardcontainer .card:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+
+  .cardcontainer .card .face.face1 .content i{
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+    
+}
+
+.cardcontainer .card .face.face1 .content h3{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+  
+.cardcontainer .card .face.face1 .content a{
+    transition: .5s;
+}
+  
+.cardcontainer .card .face.face2{
+    position: relative;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(14, 84, 212, 0.137);
+    transform: translateY(-100px);
+    height:max-content;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.cardcontainer .card:hover .face.face2{
+      transform: translateY(0);
+      
+      
+    }
+    
+    .cardcontainer .card .face.face2 .content p {
+    font-size: 12pt;
+    margin: 0 ;
+    padding: 0;
+    color:grey;
+    font-weight: 300;
+    /* background: #0056b3; */
+}
+
+
+.cardcontainer .card .face.face2 a{
+    background:  whitesmoke;
+    color: #0056b3; 
+}
+  
+.cardcontainer .card .face.face2 .content a{
+    text-decoration:none;
+    box-sizing: border-box;
+    outline : none;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+}
+
+.cardcontainer .card .face.face2 .content a:hover{
+    background: #0057b391;
+    color: white; 
+    outline: none;
+    font-weight: 300;
+  }
+  .cardcontainer .card .face.face2 .content a:active{
+    background: #0057b3;
+    color: white; 
+    outline: none;
+    font-weight: 300;
+  }
+  .container button{
+      background:  whitesmoke;
+    color: #0056b3; 
+        outline: none;
+        font-weight: 500;
+}
+.container button:hover{
+    background: v;
+    color: white; 
+    outline: none;
+    font-weight: 300;
+}
+.container button:active{
+    background: #0057b3;
+    color: white; 
+    outline: none;
+    font-weight: 300;
+}
 /* Services Section */
 .services-section {
     padding: 60px 0;
@@ -525,157 +673,7 @@ hr {
 }
 
 /* Responsive Styles */
-/* card details */
-.cardbody{
-    display:flex;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cardcontainer{
-    position: relative;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    
-}
 
-.cardcontainer .card{
-    position: relative;
-}
-  
-.cardcontainer .card .face{
-    width:300px;
-    height: 200px;
-    transition:.7s;
-    
-    
-}
-
-.cardcontainer .card .face.face1{
-    position: relative;
-    background: linear-gradient(45deg, #0056b3, #003f7f);
-    display: flex;
-    justify-content: center;
-    align-content:center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
-    
-}
-
-.cardcontainer .card:hover .face.face1{
-    transform: translateY(0);
-    box-shadow: 0 10px 20px rgba(14, 84, 212, 0.137);
-    padding: 10px 30px;
-    
-}
-
-
-.cardcontainer .card .face.face1 .content{
-    opacity: 0.5;
-    transition:  0.5s;
-    text-align: center;
-}
-
-.cardcontainer .card:hover .face.face1 .content{
-    opacity: 1;
-    
-}
-
-  .cardcontainer .card .face.face1 .content i{
-    font-size: 3em;
-    color: white;
-    display: inline-block;
-    
-}
-
-.cardcontainer .card .face.face1 .content h3{
-    font-size: 1em;
-    color: white;
-    text-align: center;
-}
-  
-.cardcontainer .card .face.face1 .content a{
-    transition: .5s;
-}
-  
-.cardcontainer .card .face.face2{
-    position: relative;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    box-shadow: 0 10px 20px rgba(14, 84, 212, 0.137);
-    transform: translateY(-100px);
-    height:max-content;
-    padding-bottom: 5px;
-    padding-left: 15px;
-}
-
-.cardcontainer .card:hover .face.face2{
-      transform: translateY(0);
-      
-      
-    }
-    
-    .cardcontainer .card .face.face2 .content p {
-    font-size: 12pt;
-    margin: 0 ;
-    padding: 0;
-    color:grey;
-    font-weight: 300;
-    /* background: #0056b3; */
-}
-
-
-.cardcontainer .card .face.face2 a{
-    background:  whitesmoke;
-    color: #0056b3; 
-}
-  
-.cardcontainer .card .face.face2 .content a{
-    text-decoration:none;
-    box-sizing: border-box;
-    outline : none;
-    padding: 10px;
-    margin: 15px 0 0;
-    display: inline-block;
-}
-
-.cardcontainer .card .face.face2 .content a:hover{
-    background: #0057b391;
-    color: white; 
-    outline: none;
-    font-weight: 300;
-  }
-  .cardcontainer .card .face.face2 .content a:active{
-    background: #0057b3;
-    color: white; 
-    outline: none;
-    font-weight: 300;
-  }
-  .container button{
-      background:  whitesmoke;
-    color: #0056b3; 
-        outline: none;
-        font-weight: 500;
-}
-.container button:hover{
-    background: v;
-    color: white; 
-    outline: none;
-    font-weight: 300;
-}
-.container button:active{
-    background: #0057b3;
-    color: white; 
-    outline: none;
-    font-weight: 300;
-}
 /* Social media icons */
 /* Socials Section */
 .socials {
