@@ -176,6 +176,7 @@ hr {
 .hero-left p {
     font-size: 1.5rem;
     color: #333;
+    
 }
 
 .btnn {
@@ -386,6 +387,16 @@ hr {
     outline: none;
     font-weight: 300;
 }
+.card-active .face.face1 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease-out;
+}
+
+.card-active .face.face2 {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
 /* Services Section */
 .services-section {
     padding: 60px 0;
@@ -394,8 +405,15 @@ hr {
 .services-section h2 {
     text-align: center;
     margin-bottom: 30px;
+    margin-right: 10px;
+    padding-right: 10PX;
     border-right: 1px solid #0056b3;
     width: 220px;
+    display: inline;
+}
+.services-section p{
+    border:none;
+    display: inline;
 }
 
 .services-section .service-cards {
@@ -903,7 +921,11 @@ hr {
     .portfolio-item img {
         width: 100%;
     }
-
+    .services-section p{
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
     .services-section .service-cards {
         grid-template-columns: 1fr;
     }
