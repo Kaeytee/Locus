@@ -241,14 +241,15 @@
                     </div>
                 </div>
                 <div class="container1form">
-                    <form action="#" method="post">
+                    <form id="contact-form">
                         <h3>Request a Consultation</h3>
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         <button type="submit" class="formbtn">Submit</button>
                     </form>
                 </div>
+                
             </div>
         </section>
         <div class="container">
@@ -258,5 +259,6 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
